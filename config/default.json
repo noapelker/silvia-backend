@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "0202ec4bdf587d5ffa8038838746ff23d2ad7e49c9e24505f65ece2d88e6746bf11ff79581f7587679c07676407ef5b16264be04a9325a036da78cb7be79d665ca25901fb99c391a9740e31baca38f6e1488f0f02131f38436de08e19694a243dcd62c08b864cf1fdd1515ae2599cb14df923fb2808293910073bc04c574e320aec98a27f057dc5628c82f5cfeebf09f9c0235de21833e0afd03d8fc84611c4a3d1bd3b15caa8c4eb4420e4dbc4a3be09b30b0a966435a3b86822f8a67f97abf21e6560af5a6edcdec395e56b05cf415d1fb3747e6fef0563231517df6bfe7f90925ecb3f050b394ca68126491acf1be06bbbb2310d39d1f590993d0d470de2f",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb+srv://noaapelker:Noa1231230123@cluster0-v4liy.mongodb.net/test?retryWrites=true"
+}
